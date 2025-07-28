@@ -1,28 +1,46 @@
 import React from "react";
-import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, View, Button } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   const { navigate } = navigation;
-  console.log("nav");
 
   const toComponents = () => navigate("Components");
-
-  const touchableOp = () => navigate("ListScreenExercise");
+  const toList = () => navigate("List");
+  const toImage = () => navigate("Image");
 
   return (
-    <View>
-      <Text style={styles.text}>HomeScreen 33</Text>
-      <Button title="GO to components Demo!" onPress={toComponents} />
-      <TouchableOpacity onPress={touchableOp}>
-        <Text>Go to list demo</Text>
-      </TouchableOpacity>
+    <View style={styles.view}>
+      <Text style={styles.text}>HomeScreen</Text>
+      <Button
+        style={styles.buttons}
+        title="GO to components Demo!"
+        onPress={toComponents}
+      />
+      <Button style={styles.buttons} title="Go to list demo" onPress={toList} />
+      <Button
+        style={styles.buttons}
+        title="Go to image demo"
+        onPress={toImage}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30,
+    fontSize: 24,
+    textAlign: "center",
+    marginTop: 20,
+    marginBottom: 20,
+    color: "#777",
+  },
+  buttons: {
+    margin: 0,
+    padding: 50,
+    backgroundColor: "#f0f0f0",
+  },
+  view: {
+    padding: 20,
   },
 });
 
