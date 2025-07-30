@@ -10,6 +10,7 @@ const HomeScreen = (props) => {
   const toCounter = () => props.navigation.navigate("Counter");
   const toColor = () => props.navigation.navigate("Color");
   const toColorCreator = () => props.navigation.navigate("ColorCreator");
+  const toSquare = () => props.navigation.navigate("Square");
 
   return (
     <View style={styles.view}>
@@ -20,6 +21,7 @@ const HomeScreen = (props) => {
       <Button title="Go to Counter Demo" onPress={toCounter} />
       <Button title="Go to Color Demo" onPress={toColor} />
       <Button title="Go to Color Creator" onPress={toColorCreator} />
+      <Button title="Go to Square Screen" onPress={toSquare} />
     </View>
   );
 };
